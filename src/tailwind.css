@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+.animation-scale {
+  animation: scaleIn 0.25s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================= */
+/* Keyframes */
+/* ============================= */
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================= */
+/* Animation Classes */
+/* ============================= */
+
+.fade-slide-down {
+  animation: fadeSlideDown 0.25s ease-out;
+}
+
+.slide-down {
+  animation: slideDown 0.25s ease-out;
+}
+
+.floating {
+  animation: floating 4s ease-in-out infinite;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* mencegah scroll horizontal */
+}
